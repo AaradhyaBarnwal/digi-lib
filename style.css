@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(151, 240, 151);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: "Playwrite AR";
+    color: rgb(180, 19, 46);
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 300;
+}
