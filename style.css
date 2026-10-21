@@ -1,14 +1,12 @@
 body{
-    background-color: rgb(151, 240, 151);
+    background-color: rgb(252, 119, 252);
     display: grid;
     align-items: center;
     justify-content: center;
 }
 
 h1{
-    font-family: "Playwrite AR";
-    color: rgb(180, 19, 46);
-    font-style: italic;
-    font-size: 3rem;
-    font-weight: 300;
+    font-family: "DynaPuff";
+    color: rgb(241, 241, 127);
+    font-size: 7rem;
 }
