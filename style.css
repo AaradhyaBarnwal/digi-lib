@@ -1,12 +1,74 @@
 body{
-    background-color: rgb(252, 119, 252);
+    background-color: #b695cf;
     display: grid;
     align-items: center;
     justify-content: center;
 }
 
 h1{
-    font-family: "DynaPuff";
-    color: rgb(241, 241, 127);
-    font-size: 7rem;
+    color: #f79f9f;
+    text-shadow: #FFE2E2 2px 2px;
+    font-size: 12rem;
+    font-family: "Fredoka";
+    margin: 1.5rem;
+}
+
+p{
+    font-family: "Comic Neue";
+    font-size: 1.4rem;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+button{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 9rem;
+    height: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: #f79f9f;
+    font-size: medium;
+    font-weight: 500;
+    border-radius: 0.6rem;
+    box-shadow: #fe7474 2px 2px;
+    color: black;
+    font-family: "Comic Neue";
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    margin: 1rem;
+}
+
+
+
+
+.lib{
+    background-color: #f79f9f;
+}
+
+.bk{
+    color: #d774fe;
+    font-family: "Love like a sister";
+}
+
+p{
+    font-size: medium;
+}
+
+.record-book{
+    width: 40vw;
+    height: 70vh;
+    background-color: #d774fe;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
 }
