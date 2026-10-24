@@ -5,8 +5,27 @@ const btn2 = document.querySelector(".btn");
 const int = document.querySelector(".int");
 const bn = document.querySelector(".bn");
 const list = document.querySelector(".list");
+const list1 = document.querySelectorAll(".list");
 
 let up = true;
+
+let items = [];
+try {
+    items = JSON.parse(localStorage.setItem("ht")) || []
+} catch (e) {
+    items = [];
+}
+
+function render() {
+    list.innerHTML = "";
+    list1.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
+}
+
+render();
 
 recButton.addEventListener("click", () => {
   if (up) {
@@ -23,5 +42,15 @@ recButton.addEventListener("click", () => {
 });
 
 btn2.addEventListener("click",()=>{
-    let ice = 
+    btn2.classList.add("none");
+    int.classList.add("none");
+    bn.classList.add("none");
+   
+    const value = int.value.trim();
+    if (value) {
+        items.push(value);
+        localStorage.setItem("ht", JSON.stringify(items))
+        render();
+    }
+    int.value = "";
 })
