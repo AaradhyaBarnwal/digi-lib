@@ -50,7 +50,8 @@ btn2.addEventListener("click",()=>{
     int.classList.add("none");
     bn.classList.add("none");
     list.classList.remove("none");
-   
+    list.classList.add("flex");
+    
     const value = int.value.trim();
     if (value) {
         items.push(value);
