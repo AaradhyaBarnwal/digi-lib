@@ -100,12 +100,13 @@ h3{
 }
 
 h4{
-    color: #f6c6c6;
+    color: #410404;
     font-size: large;
     display: flex;
     align-self: center;
     justify-self: center;
     font-family: "Inter";
+    font-weight: 300;
     margin: 0;
 }
 
@@ -116,4 +117,15 @@ h4{
 
 .none{
     display: none;
+}
+
+input{
+    height: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.list{
+    font-family: "Inter";
 }
