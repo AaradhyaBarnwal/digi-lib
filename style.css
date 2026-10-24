@@ -119,6 +119,11 @@ h4{
     display: none;
 }
 
+.flex{
+    display: grid;
+    gap: 5px;
+}
+
 input{
     height: 1rem;
     border-radius: 0.3rem;
@@ -128,4 +133,10 @@ input{
 
 .list{
     font-family: "Inter";
+}
+
+.list button{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
 }
