@@ -19,8 +19,13 @@ function render() {
     list.innerHTML = "";
     items.forEach((item) => {
         const li = document.createElement("li");
+        const button = document.createElement("button");
+
+        button.innerText = "✖"; 
         li.textContent = item;
+
         list.appendChild(li);
+        list.appendChild(button);
     });
 }
 
