@@ -16,16 +16,14 @@ try {
 }
 
 function render() {
+
     list.innerHTML = "";
+    
     items.forEach((item) => {
         const li = document.createElement("li");
-        const button = document.createElement("button");
-
-        button.innerText = "✖"; 
         li.textContent = item;
-
         list.appendChild(li);
-        list.appendChild(button);
+
     });
 }
 
@@ -51,7 +49,7 @@ btn2.addEventListener("click",()=>{
     bn.classList.add("none");
     list.classList.remove("none");
     list.classList.add("flex");
-    
+
     const value = int.value.trim();
     if (value) {
         items.push(value);
