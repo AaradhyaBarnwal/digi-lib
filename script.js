@@ -11,14 +11,14 @@ let up = true;
 
 let items = [];
 try {
-    items = JSON.parse(localStorage.setItem("ht")) || []
+    items = JSON.parse(localStorage.getItem("ht")) || []
 } catch (e) {
     items = [];
 }
 
 function render() {
     list.innerHTML = "";
-    list1.forEach((item) => {
+    items.forEach((item) => {
         const li = document.createElement("li");
         li.textContent = item;
         list.appendChild(li);
