@@ -5,7 +5,6 @@ const btn2 = document.querySelector(".btn");
 const int = document.querySelector(".int");
 const bn = document.querySelector(".bn");
 const list = document.querySelector(".list");
-const list1 = document.querySelectorAll(".list");
 
 let up = true;
 
@@ -45,6 +44,7 @@ btn2.addEventListener("click",()=>{
     btn2.classList.add("none");
     int.classList.add("none");
     bn.classList.add("none");
+    list.classList.remove("none");
    
     const value = int.value.trim();
     if (value) {
