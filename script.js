@@ -5,7 +5,6 @@ const btn2 = document.querySelector(".btn");
 const int = document.querySelector(".int");
 const bn = document.querySelector(".bn");
 const list = document.querySelector(".list");
-
 let up = true;
 
 let items = [];
@@ -17,14 +16,25 @@ try {
 
 function render() {
 
+       
+
     list.innerHTML = "";
-    
+        const head = document.createElement("h2");
+        head.innerText = "Records";
+        list.appendChild(head);
     items.forEach((item) => {
         const li = document.createElement("li");
+
         li.textContent = item;
+        
+    li.addEventListener("click",()=>{
+        li.innerText = "";
+    })
         list.appendChild(li);
 
     });
+
+    
 }
 
 render();
@@ -36,6 +46,7 @@ recButton.addEventListener("click", () => {
     recButton.innerText = "Upload";
     up = false;
   } else {
+    const head = document.querySelector("reco");
     btn2.classList.remove("none");
     int.classList.remove("none");
     bn.classList.remove("none");
