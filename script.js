@@ -22,18 +22,25 @@ function render() {
         const head = document.createElement("h2");
         head.innerText = "Records";
         list.appendChild(head);
-    items.forEach((item) => {
+    items.forEach((item,index) => {
         const li = document.createElement("li");
 
         li.textContent = item;
         
     li.addEventListener("click",()=>{
-        li.innerText = "";
+        items.splice(index,1);
+        localStorage.setItem("ht", JSON.stringify(items));
+        render();
     })
         list.appendChild(li);
 
     });
 
+    head.addEventListener("click",()=>{
+        li.style.color = "pink";
+        localStorage.setItem("ht", JSON.stringify(items));
+        render();
+    })
     
 }
 
