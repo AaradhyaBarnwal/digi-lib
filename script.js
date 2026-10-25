@@ -36,11 +36,7 @@ function render() {
 
     });
 
-    head.addEventListener("click",()=>{
-        li.style.color = "pink";
-        localStorage.setItem("ht", JSON.stringify(items));
-        render();
-    })
+    
     
 }
 
