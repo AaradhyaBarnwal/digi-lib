@@ -76,7 +76,7 @@ p{
 
 .record-book{
     width: 40vw;
-    height: 70vh;
+    min-height: 70vh;
     background-color: #d774fe;
     display: grid;
     align-self: center;
@@ -85,6 +85,7 @@ p{
     justify-content: center;
     border-radius: 2rem;
     margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .open{
@@ -103,7 +104,7 @@ h3{
 
 h4{
     color: #0b0000;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 100;
     display: flex;
     align-self: center;
@@ -144,7 +145,7 @@ input{
 
 .list h2{
     font-family: Sour Gummy;
-    color: #ff5a5a;
+    color: #fc8888;
     text-shadow: 2px 2px #eb6262;
     font-size: 4rem;
     display: flex;
@@ -163,4 +164,11 @@ input{
 
 .tt{
     height: 27vh;
+}
+
+.in{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }

@@ -15,25 +15,31 @@ try {
 }
 
 function render() {
-
-       
-
     list.innerHTML = "";
-        const head = document.createElement("h2");
+
+       const head = document.createElement("h2");
         head.innerText = "Records";
         list.appendChild(head);
+
+        
     items.forEach((item,index) => {
         const li = document.createElement("li");
 
         li.textContent = item;
-        
     li.addEventListener("click",()=>{
-        items.splice(index,1);
+       let ques = prompt("Delete?Answer in yes or no")
+        if (ques && ques.trim().toLocaleLowerCase() === "yes") {
+            items.splice(index,1);
         localStorage.setItem("ht", JSON.stringify(items));
-        render();
+        render(); 
+        } else {
+            prompt("plz click on it again and answer in yes for deletion")
+        }
+       
     })
         list.appendChild(li);
 
+       
     });
 
     
@@ -57,12 +63,16 @@ recButton.addEventListener("click", () => {
   }
 });
 
-btn2.addEventListener("click",()=>{
-    btn2.classList.add("none");
+let adding = true;
+    btn2.addEventListener("click",()=>{
+if (adding) {
+
+    btn2.innerText = "Add more";
     int.classList.add("none");
     bn.classList.add("none");
     list.classList.remove("none");
     list.classList.add("flex");
+    
 
     const value = int.value.trim();
     if (value) {
@@ -71,4 +81,17 @@ btn2.addEventListener("click",()=>{
         render();
     }
     int.value = "";
-})
+    adding = false;
+
+} else {
+    btn2.addEventListener("click",()=>{
+
+        int.classList.remove("none");
+        bn.classList.remove("none");
+        btn2.innerText = "Done";
+        adding = true;
+    })
+}
+    })
+
+
